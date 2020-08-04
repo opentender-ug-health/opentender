@@ -48,7 +48,6 @@ Minimal Deployment on one machine
 
 # Tools
 
-* tenderapi-scraper - The data in the Digiwhist Project is provided by a REST API. For now it is non public and restricted on project partners. This script downloads the data to be imported by the Backend to the Database.
 * opentender-playbook - An ansible install script for server deployment
 * opentender-docker - An docker based installation for test purposes
 
@@ -62,7 +61,6 @@ opentender
 ├── backend
 ├── data
 ├── frontend
-└── scraper
 ```
 
 - install [NodeJS](https://nodejs.org/) 8.x and [NPM](https://www.npmjs.com/)
@@ -76,8 +74,6 @@ opentender
 - run script `./setup.sh` in the `setup`-folder 
 
   this installs all opentender parts and copies the default configuration
-  
-  please note: you need configure the tenderapi scraper with your digiwhist partner info, since it is currently non-public 
 
 # Starting
 

@@ -1,23 +1,26 @@
-var path = require('path');
 module.exports = {
 	server: {
 		listen: {  // where the frontend should be listening
-			host: '0.0.0.0',
+			host: '127.0.0.1',
 			port: 3000
 		},
-		data: { // absolute paths to the data folders (see https://github.com/digiwhist/opentender-data)
-			path: path.resolve(__dirname, '../data/shared')
+		data: { // absolute paths to the data folders (see https://github.com/opentender-jm/opentender-data)
+			path: '/var/www/opentender/data/shared'
 		},
+		backendUrl: 'http://127.0.0.1:3001',
+		fullUrl: 'https://portal.opentender.eu',
 		cache: {
-			type: 'internal', // disabled | internal | memcached
+			type: 'disabled', // disabled | internal | memcached
 			memcached: ['127.0.0.1:11211'] // if type == memcached, server address(es)
-		},
-		backendUrl: 'http://127.0.0.1:3001', // full url of the backend
-		fullUrl: 'https://portal.opentender.eu'
+		}
 	},
 	client: {
-		backendUrl: 'http://127.0.0.1:3001', // full url of the backend
+		backendUrl: 'https://portal.opentender.eu', // full url of the backend
 		devMode: false // e.g. disable page tracking if true
-	}
+	},
+	country: {
+		id: 'jm',
+		name: 'Jamaica'
+	},
+	currencySymbol: '$'
 };
-
