@@ -5,6 +5,3 @@ cd ..
 cd frontend
 npm install
 cd ..
-cd scraper
-npm install
-cd ..
